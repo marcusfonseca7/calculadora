@@ -1,0 +1,41 @@
+html, body {
+    min-width: 98svw;
+    min-height: 98svh;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_calculator{
+    border: solid 1px;
+    padding: 20px;
+    background-color: rgb(255, 252, 247);
+}
+
+.calculator{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 300px;
+    min-height: 350px;
+    background-color: rgb(231, 255, 255);
+}
+
+.calculator div {
+    border: solid 1px;
+    padding: 15px 20px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+.result{
+    grid-column: span 4;
+
+}
+
+.options{
+    grid-column: span 4;
+}
