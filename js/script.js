@@ -11,5 +11,9 @@ function backspace() {
 }
 
 function sum() {
-    
+
+}
+
+function c(){
+    result.innerHTML = ""
 }
