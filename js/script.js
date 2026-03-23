@@ -28,9 +28,9 @@ function c() {
 }
 
 function parentheses() {
-  if (result.innerText === "") {
-    result.innerHTML = "(";
-  } else{
+  if (result.innerText.includes("(")) {
     result.innerHTML += ")";
+  } else{
+    result.innerHTML += "(";
   }
 }
