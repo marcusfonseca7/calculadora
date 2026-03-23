@@ -2,7 +2,7 @@ const result = document.getElementById("result");
 const plus = document.getElementById("plus");
 
 function display(num) {
-  result.innerHTML += `${num}`;
+  result.innerHTML += num;
 }
 
 function backspace() {
@@ -25,4 +25,12 @@ function invertValue() {
 
 function c() {
   result.innerHTML = "";
+}
+
+function parentheses() {
+  if (result.innerText === "") {
+    result.innerHTML = "(";
+  } else{
+    result.innerHTML += ")";
+  }
 }
