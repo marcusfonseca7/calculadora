@@ -23,6 +23,12 @@ function invertValue() {
   result.innerHTML = Number(result.innerText) * -1
 }
 
+function point() {
+  if (!result.innerText.includes(".")) {
+    result.innerHTML += ".";
+  } 
+}
+
 function c() {
   result.innerHTML = "";
 }
