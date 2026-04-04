@@ -1,42 +1,48 @@
 const result = document.getElementById("result");
-const plus = document.getElementById("plus");
 
 function display(num) {
-  result.innerHTML += num;
+  result.value += num;
 }
+
+function displayOperator(operator) {
+  if (result.value === ""){
+    
+  } else if (
+    !result.value.includes("+") &&
+    !result.value.includes("-") &&
+    !result.value.includes("/") &&
+    !result.value.includes("x")
+  ) {
+    result.value += operator;
+  }
+}
+
+displayOperator;
 
 function backspace() {
-  result.innerHTML = result.innerText.slice(0, -1);
+  result.value = result.value.slice(0, -1);
 }
-
-function sum() {}
-
-function subtraction() {}
-
-function multiply() {}
-
-function divide() {}
 
 function equals() {}
 
 function invertValue() {
-  result.innerHTML = Number(result.innerText) * -1
+  result.value = Number(result.value) * -1;
 }
 
-function point() {
-  if (!result.innerText.includes(".")) {
-    result.innerHTML += ".";
-  } 
+function displayPoint() {
+  if (!result.value.includes(".")) {
+    result.value += ".";
+  }
 }
 
-function c() {
-  result.innerHTML = "";
+function eraseAll() {
+  result.value = "";
 }
 
 function parentheses() {
-  if (result.innerText.includes("(")) {
-    result.innerHTML += ")";
-  } else{
-    result.innerHTML += "(";
+  if (result.value.includes("(")) {
+    result.value += ")";
+  } else {
+    result.value += "(";
   }
 }
