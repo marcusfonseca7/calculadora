@@ -20,7 +20,7 @@
     <main>
       <section class="container_calculator">
         <div class="display">
-          <input readonly maxlength="20" id="result" class="result" />
+          <input type="text" maxlength="5" id="result" class="result" />
           <div class="display_options">
             <button onclick="backspace()">
               <img
@@ -42,7 +42,7 @@
             class="calculator_operations"
             onclick="displayOperator(' / ')"
           >
-            /
+            ÷
           </button>
 
           <button onclick="display(7)">7</button>
@@ -50,7 +50,7 @@
           <button onclick="display(9)">9</button>
           <button
             class="calculator_operations"
-            onclick="displayOperator(' x ')"
+            onclick="displayOperator(' * ')"
           >
             x
           </button>

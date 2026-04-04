@@ -5,32 +5,34 @@ function display(num) {
 }
 
 function displayOperator(operator) {
-  if (result.value === ""){
-    
+  if (result.value === "") {
+    result.value += 0 + operator;
   } else if (
     !result.value.includes("+") &&
-    !result.value.includes("-") &&
     !result.value.includes("/") &&
-    !result.value.includes("x")
+    !result.value.includes("*") ||
+    !result.value.includes("-")
   ) {
     result.value += operator;
   }
 }
 
-displayOperator;
-
 function backspace() {
-  result.value = result.value.slice(0, -1);
+  result.value = result.value.trim().slice(0, -1);
 }
 
-function equals() {}
+function equals() {
+  result.value = eval(result.value);
+}
 
 function invertValue() {
   result.value = Number(result.value) * -1;
 }
 
 function displayPoint() {
-  if (!result.value.includes(".")) {
+  if (result.value === "") {
+    result.value += 0 + ".";
+  } else if (!result.value.includes(".")) {
     result.value += ".";
   }
 }
