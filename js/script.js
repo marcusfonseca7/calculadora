@@ -4,13 +4,21 @@ function display(num) {
   result.value += num;
 }
 
+function isTwoMinus() {
+  if (result.value.split("-").length - 1 === 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function displayOperator(operator) {
-  if (result.value === "") {
+   if (result.value === "") {
     result.value += 0 + operator;
   } else if (
     !result.value.includes("+") &&
     !result.value.includes("/") &&
-    !result.value.includes("*") ||
+    !result.value.includes("*") &&
     !result.value.includes("-")
   ) {
     result.value += operator;
@@ -22,7 +30,7 @@ function backspace() {
 }
 
 function equals() {
-  result.value = eval(result.value);
+  result.value = +eval(result.value).toFixed(8);
 }
 
 function invertValue() {
